@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CustomerService {
-    private baseUrl = 'http://localhost:8080/customer';
+    private baseUrl = 'http://16.176.215.93:8081/customer';
     private http = inject(HttpClient)
 
     saveCustomer(customer:Customer):Observable<Customer>{
