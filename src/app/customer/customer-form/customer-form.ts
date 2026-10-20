@@ -46,8 +46,10 @@ export class CustomerForm implements OnInit {
 
     this.customerService.getCustomer().subscribe({
       next: (data) => {
+        console.log('Customer API response:', data);
         this.customers = data;
         this.loading = false;
+        console.log('Customers assigned:', this.customers);
       },
       error: (error) => {
         console.error('List API failed:', error);
